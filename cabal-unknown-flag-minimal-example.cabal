@@ -1,0 +1,15 @@
+cabal-version:       2.4
+
+name:                cabal-unknown-flag-minimal-example
+version:             0.1.0.0
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Michael Hueschen
+maintainer:          m@mhueschen.space
+
+library
+  build-depends:       base ^>=4.12.0.0
+  default-language:    Haskell2010
+
+  if (!flag(development))
+    ghc-options:         -Werror
